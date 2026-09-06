@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>本週時間軸｜BNI 大正接待組</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="topbar-title">BNI 大正・來賓接待組</div>
+    <div class="topbar-sub">賓至如歸</div>
+  </div>
+
+  <div class="pagehead">
+    <h1>📅 本週時間軸</h1>
+    <p>例會＝每週三早上 6:30–8:30（線上 Zoom）。<br>點你的角色，看這一週什麼時間該做什麼。</p>
+  </div>
+
+  <div class="task-tabs">
+    <button class="task-tab active" data-p="all">全組</button>
+    <button class="task-tab" data-p="leader">👑 組長</button>
+    <button class="task-tab" data-p="data">📋 資料手</button>
+    <button class="task-tab" data-p="host">🎤 主持</button>
+    <button class="task-tab" data-p="room">🚪 分房手</button>
+  </div>
+
+  <!-- 全組 -->
+  <div class="card panel" id="p-all">
+    <span class="day-pill">週一</span>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-name">文案準備・組內提醒</div><div class="tl-desc">確認本週分工，提醒夥伴各自任務。</div></div>
+    </div>
+    <span class="day-pill">週二</span>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-time">18:00</div><div class="tl-name">抓來賓名單、Key 表</div><div class="tl-desc">帶來賓截止，到「會務接龍」群抓名單，填追蹤表與分房表。</div></div>
+      <div class="tl-item"><div class="tl-time">下午～傍晚</div><div class="tl-name">確認房長</div><div class="tl-desc">逐一聯繫房長是否可協助，有問題立即更換。</div></div>
+      <div class="tl-item"><div class="tl-time">19:00</div><div class="tl-name">會務公告佈達</div><div class="tl-desc">佈達房長／主持／分房名單，tag 主席與相關夥伴。</div></div>
+      <div class="tl-item"><div class="tl-time">晚上</div><div class="tl-name">發來賓群提醒</div><div class="tl-desc">改名格式＋流程說明＋Zoom 連結。</div></div>
+    </div>
+    <span class="day-pill">週三（例會日）</span>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-time">6:15–6:29</div><div class="tl-name">進房暖場</div><div class="tl-desc">分房手拿聯席主持人權限；協助來賓改名；6:25 拍早鳥照。</div></div>
+      <div class="tl-item"><div class="tl-time">6:30–6:59</div><div class="tl-name">上／下半場會前訪談</div><div class="tl-desc">主持人開場、訪談來賓；6:58 大合照後交麥給主席。</div></div>
+      <div class="tl-item"><div class="tl-time">7:00–8:00</div><div class="tl-name">例會進行</div><div class="tl-desc">組長念接待組稿；隨時回報來賓動態、更新來賓狀態。</div></div>
+      <div class="tl-item"><div class="tl-time">8:00–8:15</div><div class="tl-name">來賓分小房間</div><div class="tl-desc">15 分鐘小房間交流；大房間主持訪談留下的來賓；各房拍照。</div></div>
+      <div class="tl-item"><div class="tl-time">會後</div><div class="tl-name">感謝來賓</div><div class="tl-desc">來賓群發感謝訊息，發「大正高能量」照片。</div></div>
+    </div>
+    <span class="day-pill">週四</span>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-name">清來賓出群</div><div class="tl-desc">感謝參訪＋協助退群；提醒下週簡報者邀約來賓。</div></div>
+    </div>
+  </div>
+
+  <!-- 組長 -->
+  <div class="card panel" id="p-leader" hidden>
+    <span class="day-pill">週一</span>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-name">組內提醒</div><div class="tl-desc">確認本週分工與輪值，提醒夥伴任務。</div></div>
+    </div>
+    <span class="day-pill">週二</span>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-name">把關房長名單</div><div class="tl-desc">確認房長人選（時間・工作・能力），特例太多要擋。</div></div>
+      <div class="tl-item"><div class="tl-time">19:00</div><div class="tl-name">確認佈達</div><div class="tl-desc">會務公告佈達要 tag 主席＆接待老大。</div></div>
+    </div>
+    <span class="day-pill">週三（例會日）</span>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-time">6:15</div><div class="tl-name">到場掌握全局</div><div class="tl-desc">確認會員出席狀況、主持與分房就位。</div></div>
+      <div class="tl-item"><div class="tl-time">例會中</div><div class="tl-name">念接待組稿</div><div class="tl-desc">「我是來賓接待組組長〇〇〇，負責與會來賓的接待準備事宜⋯」介紹組員後交棒資訊組。</div></div>
+      <div class="tl-item"><div class="tl-time">全程</div><div class="tl-name">回報來賓狀況</div><div class="tl-desc">隨時注意剛上線／未訪問的來賓，發起共識。</div></div>
+    </div>
+    <span class="day-pill">週四</span>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-name">來賓跟進報告</div><div class="tl-desc">檢視追蹤表結案狀況——至關重要，分會成長就看你了！</div></div>
+      <div class="tl-item sub"><div class="tl-name">每月一次</div><div class="tl-desc">召開接待組檢討會，安排培訓（主持／房長／系統）。</div></div>
+    </div>
+  </div>
+
+  <!-- 資料手 -->
+  <div class="card panel" id="p-data" hidden>
+    <span class="day-pill">週二</span>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-time">18:00</div><div class="tl-name">會務接龍抓名單</div><div class="tl-desc">到「大正會務接龍」群找來賓名單（姓名／專業別／引薦人）。</div></div>
+      <div class="tl-item"><div class="tl-time">18:00 後</div><div class="tl-name">Key 兩張表</div><div class="tl-desc">「來賓分配暨進度追蹤表」接最下面 key 名單；再複製到「主持輪值與來賓分房表」。</div></div>
+      <div class="tl-item"><div class="tl-name">私訊摸需求</div><div class="tl-desc">問引薦人：來賓是支持相挺？想了解 BNI？要人脈引薦？</div></div>
+      <div class="tl-item"><div class="tl-name">確認房長</div><div class="tl-desc">所有房長都要再次確認可協助，有問題立即更換。</div></div>
+      <div class="tl-item"><div class="tl-time">19:00</div><div class="tl-name">會務公告佈達</div><div class="tl-desc">佈達成員名單並明確告知每位夥伴（tag 到人）。</div></div>
+      <div class="tl-item"><div class="tl-time">晚上</div><div class="tl-name">來賓群提醒</div><div class="tl-desc">發改名格式＋流程＋Zoom 連結（話術包有現成模板）。</div></div>
+    </div>
+    <span class="day-pill">週三（例會日）</span>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-time">全程</div><div class="tl-name">更新來賓狀態</div><div class="tl-desc">已上線／未上線／已訪，同步到主持群讓主持人接手。</div></div>
+    </div>
+    <span class="day-pill">週四</span>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-name">清來賓出群</div><div class="tl-desc">發感謝詞、協助來賓退群。</div></div>
+      <div class="tl-item"><div class="tl-name">提醒下週</div><div class="tl-desc">提醒下週簡報者邀約來賓。</div></div>
+    </div>
+  </div>
+
+  <!-- 主持 -->
+  <div class="card panel" id="p-host" hidden>
+    <span class="day-pill">週二</span>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-time">晚上</div><div class="tl-name">確認場次與來賓</div><div class="tl-desc">收到佈達後確認自己是上／下半場或大房間，看來賓名單預想訪談。</div></div>
+    </div>
+    <span class="day-pill">週三（例會日）</span>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-time">6:15–6:29</div><div class="tl-name">進房暖場</div><div class="tl-desc">會前閒聊以夥伴為主，來賓提早上線要簡單問候；6:25 早鳥照。</div></div>
+      <div class="tl-item"><div class="tl-time">6:30–6:44</div><div class="tl-name">上半場主持</div><div class="tl-desc">開場白 → 訪談來賓（編號前半），每位最多 5 分鐘。</div></div>
+      <div class="tl-item"><div class="tl-time">6:45–6:59</div><div class="tl-name">下半場主持</div><div class="tl-desc">中場交接 → 訪談來賓（編號後半）。</div></div>
+      <div class="tl-item"><div class="tl-time">6:58</div><div class="tl-name">大合照</div><div class="tl-desc">請大家開鏡頭 → 交拍照手 → 交麥給主席。</div></div>
+      <div class="tl-item"><div class="tl-time">8:00–8:15</div><div class="tl-name">大房間主持</div><div class="tl-desc">優先訪留在大房的來賓 → 簡報過的會員 → 開鏡會員。</div></div>
+    </div>
+  </div>
+
+  <!-- 分房手 -->
+  <div class="card panel" id="p-room" hidden>
+    <span class="day-pill">週二</span>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-time">晚上</div><div class="tl-name">對分房表</div><div class="tl-desc">確認來賓、房長、房員名單分組無誤。</div></div>
+    </div>
+    <span class="day-pill">週三（例會日）</span>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-time">6:15</div><div class="tl-name">拿權限</div><div class="tl-desc">上線後請資訊組設定你為「聯席主持人」。</div></div>
+      <div class="tl-item"><div class="tl-time">會議中</div><div class="tl-name">設定分組討論室</div><div class="tl-desc">依分房表建房，來賓時間 15 分鐘、倒數 60 秒，勾選照 SOP 對照圖。</div></div>
+      <div class="tl-item"><div class="tl-time">8:00</div><div class="tl-name">開啟分房</div><div class="tl-desc">點兵點將送人進房；分好房間不能再改。</div></div>
+      <div class="tl-item"><div class="tl-time">8:00–8:15</div><div class="tl-name">各房拍照</div><div class="tl-desc">到每個小房間拍照 → 發「大正高能量」。</div></div>
+    </div>
+    <div class="warnbox">🗂 完整 Zoom 操作截圖請看「分房攻略 SOP」。</div>
+  </div>
+
+  <div class="navrow">
+    <a class="btnW" href="roles.html">👋 角色任務</a>
+    <a class="btnW" href="sop.html">🗂 分房攻略</a>
+  </div>
+  <a class="btnO" href="index.html">回任務總覽</a>
+
+  <div class="foot">BNI 大正白金分會・來賓接待組<br>Givers Gain®</div>
+</div>
+
+<script>
+document.querySelectorAll('.task-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.task-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    document.querySelectorAll('.panel').forEach(p => p.hidden = true);
+    document.getElementById('p-' + tab.dataset.p).hidden = false;
+  });
+});
+</script>
+</body>
+</html>
