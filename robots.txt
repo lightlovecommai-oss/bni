@@ -1,0 +1,9 @@
+# bni.atpifit.com — BNI 大正接待組工具 ＋ 一對一五表
+#
+# 這個子網域不進搜尋索引：根目錄是分會內部任務表，/121/ 是一對一手交的個人資料
+# （含生日與居住地）。退出索引是靠每頁的 <meta name="robots" content="noindex">，
+# 這裡刻意「允許爬取」——用 Disallow 擋住反而會讓 Google 讀不到那個 noindex，
+# 網址照樣可能以裸連結的形式出現在搜尋結果裡。
+
+User-agent: *
+Allow: /
