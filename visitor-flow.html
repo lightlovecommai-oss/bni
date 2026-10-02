@@ -45,9 +45,9 @@
     <div class="hdiv"></div>
 
     <div class="copybox"><strong>來賓訪談三個方向</strong>
-1️⃣ 專業與服務：領域、區域、經歷、核心價值
-2️⃣ 引薦需求：2–3 位理想客戶或合作產業（可舉例）
-3️⃣ 成為來賓的原因：為什麼願意擔任平凡人光頭的來賓 🤣</div>
+1. 專業與服務：領域、區域、經歷、核心價值
+2. 引薦需求：2–3 位理想客戶或合作產業（可舉例）
+3. 成為來賓的原因：為什麼願意擔任平凡人光頭的來賓 🤣</div>
   </div>
 
   <!-- Section 2: 15 秒公式 -->
@@ -116,10 +116,62 @@
     <div class="warnbox">🤝 關心你的 <strong>大正夥伴</strong></div>
   </div>
 
-  <!-- CTA -->
-  <div style="margin-top:18px;">
-    <a class="btnO" href="https://atpifit.com">✉️ 訂閱大正商務電子報</a>
+  <!-- Section 4: 訂閱電子報 -->
+  <div class="section-head"><span class="section-icon">✉️</span><span class="section-title">訂閱大正商務電子報</span></div>
+  <div class="card">
+    <p style="font-size:15px;color:#7a5636;line-height:1.65;margin-bottom:14px;">
+      留個 Email，我們會不定期分享<strong style="color:#2d1f0f;">商務人脈、溝通技巧、BNI 大正活動</strong>。
+    </p>
+    <form id="sub-form" novalidate>
+      <input type="email" name="email" placeholder="你的 Email" required autocomplete="email"
+             style="width:100%;padding:14px 16px;font-size:16px;border:1.5px solid #e8ddd2;border-radius:16px;margin-bottom:10px;font-family:inherit;background:#fff;" />
+      <button type="submit" class="btnO" id="sub-btn">訂閱</button>
+    </form>
+    <p id="sub-msg" style="margin-top:10px;font-size:14px;font-weight:600;min-height:1.5em;"></p>
+    <p style="margin-top:4px;font-size:13px;color:#8a7266;">我們不寄廣告，隨時可以退訂。</p>
   </div>
+
+<script>
+(function(){
+  // Apps Script 端點(跟 atpifit.com 官網 Newsletter 共用),後端寫 Sheet + 推 LaunChill workflow②
+  var SHEET_API = 'https://script.google.com/macros/s/AKfycbz7VxeV8ZmjSiGNO-G3ZwRLPg-H1H2NjXHy6brCU5yVaVoYOXB-LItU750j81Q3eno/exec';
+  var form = document.getElementById('sub-form');
+  var msg = document.getElementById('sub-msg');
+  var btn = document.getElementById('sub-btn');
+  function say(text, color){ msg.textContent = text; msg.style.color = color; }
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var email = (form.email.value || '').trim();
+    if (!email) return;
+    btn.disabled = true;
+    var original = btn.textContent;
+    btn.textContent = '送出中…';
+    say('', '');
+    try {
+      // text/plain = 簡單請求,避開 CORS 預檢(跟官網/測驗同一招)
+      var r = await fetch(SHEET_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({
+          email: email,
+          source: 'bni-visitor-flow',  // 這批來自 BNI 來賓流程頁,之後要分 cohort 看這欄
+          page: location.pathname,
+          timestamp: new Date().toISOString()
+        })
+      });
+      var d = await r.json().catch(function(){ return {}; });
+      if (!r.ok || d.status !== 'ok') throw new Error(d.status || 'HTTP ' + r.status);
+      form.remove();
+      say('✅ 訂閱好了，第一封信在路上。', '#4a7c3a');
+    } catch (err) {
+      console.warn('訂閱失敗:', err);
+      say('⚠️ 送出時出了點狀況，麻煩再按一次。', '#c26b3a');
+      btn.disabled = false;
+      btn.textContent = original;
+    }
+  });
+})();
+</script>
 
 </div>
 </body>
